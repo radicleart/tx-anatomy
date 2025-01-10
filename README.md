@@ -1,6 +1,6 @@
-# @mijoco/stx_helpers
+# tx-anatomy
 
-Helper functions common to stxeco and other applications
+Analyse bitcoin transactions and embedded protocols.
 
 ## Creating a project
 
@@ -17,21 +17,6 @@ npm install @types/node --save-dev
 To publish your library to [npm](https://www.npmjs.com):
 
 ```bash
-npm publish --access public
-```
-
-## Packing
-
-Test the helpers prior to publishing.
-
-```bash
 npm run build
-npm pack
-mv mijoco-stxeco_helpers-0.0.xx.tgz ../stxeco-launcher
-```
-
-in stxeco-launcher;
-
-```bash
-npm install ./mijoco-stxeco_helpers-0.0.xx.tgz
+npm publish --access public
 ```

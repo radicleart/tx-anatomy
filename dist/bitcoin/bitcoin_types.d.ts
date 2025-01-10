@@ -1,4 +1,9 @@
 export type PayloadType = {
+    magic: MagicCode;
+    data: string | SbtcPayloadType;
+};
+export type SbtcPayloadType = {
+    magic: MagicCode;
     sbtcWallet?: string;
     txIndex?: number;
     burnBlockHeight?: number;
@@ -16,4 +21,15 @@ export type PayloadType = {
     signature?: string;
     dustAmount?: number;
     eventType?: string;
+};
+export type MagicCode = {
+    magic?: string;
+    opcode: string;
+    txType?: string;
+};
+export type TransactionOutput = {
+    data: string | PayloadType | SbtcPayloadType;
+    type: string;
+    protocol: string;
+    amount?: bigint;
 };
